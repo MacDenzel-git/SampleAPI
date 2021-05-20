@@ -22,6 +22,6 @@ namespace DataAccessLayer.DataTransferObjects
         public string Phone { get; set; }
         public string ImageUrl { get; set; }
         public byte[] ImgBytes { get; set; }
-        public IEnumerable<ProjectPartnershipPlatformsDTO> GivingPlatforms { get; set; }
+        public IEnumerable<ProjectPartnershipPlatformsDTO> ProjectPartnershipPlatforms { get; set; }
     }
 }

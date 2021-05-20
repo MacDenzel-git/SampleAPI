@@ -41,7 +41,7 @@ namespace BusinessLogicLayer.Services.BranchServiceContainer
                 var givingPlatforms = new AutoMapper<ProjectPartnershipPlatform, ProjectPartnershipPlatformsDTO>().MapToList(await _givingPlatformRepository.GetListAsync(x => x.BranchId == teamMember.BranchId));
                 branch.BranchLeaderName = teamMember.Name;
                 branch.ImgBytes = await FileHandler.ConvertFileToByte(branch.ImageUrl);
-                branch.GivingPlatforms = givingPlatforms;
+                branch.ProjectPartnershipPlatforms = givingPlatforms;
                 return branch;
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace BusinessLogicLayer.Services.BranchServiceContainer
                 }
 
                 branch.ImgBytes = await FileHandler.ConvertFileToByte(branch.ImageUrl);
-                branch.GivingPlatforms = givingPlatforms;
+                branch.ProjectPartnershipPlatforms = givingPlatforms;
                 return branch;
             }
             catch (Exception ex)
